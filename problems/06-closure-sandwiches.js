@@ -17,8 +17,20 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
-// Your code here
+function sandwichMaker() {
+  let addons = ['tomato']
 
+  return function (addon) {
+    addons.push(addon)
+    let sandwich = "One sandwich with "
+    return sandwich + addons.join(" and ")
+  };
+
+}
+let sandwich = sandwichMaker(); // => returns a function
+console.log(sandwich("spinach")) // => "One sandwich with tomato and spinach"
+console.log(sandwich("jelly")) // => "One sandwich with tomato and spinach and jelly"
+console.log(sandwich("bread")) // => "One sandwich with tomato and spinach and jelly and bread"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
