@@ -15,7 +15,13 @@ console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 
 ***********************************************************************/
+const interrupter = (word) => {
 
+  return (sentence) => {
+    let array = sentence.split(" ")
+    return array.join( ` ${word} ` )
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
