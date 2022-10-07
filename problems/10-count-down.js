@@ -28,7 +28,22 @@ Example 4:
 
 ***********************************************************************/
 
-// Your code here
+const countDownTimer = initialCount => {
+  let count = initialCount;
+  const happyString = "Happy New Year!";
+
+  const theOtherFunction = () => {
+    count--;
+    return count === 0 ? happyString : "Not yet!";
+  }
+
+  return count === 0 ? happyString : theOtherFunction;
+}
+
+let threeDays = countDownTimer(3); // returns a function
+console.log(threeDays()); // returns a function
+console.log(threeDays()); // returns a function
+console.log(threeDays()); // prints "Happy New Year!"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
